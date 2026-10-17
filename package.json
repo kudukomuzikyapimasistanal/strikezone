@@ -1,0 +1,32 @@
+{
+  "name": "sonsuz-kosu",
+  "version": "1.0.0",
+  "description": "Sonsuz Ko\u015fu",
+  "main": "main.js",
+  "author": "Sonsuz Ko\u015fu",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win portable --publish never"
+  },
+  "dependencies": {
+    "three": "0.128.0"
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.sonsuzkosu.game",
+    "productName": "Sonsuz Kosu",
+    "files": [
+      "main.js",
+      "game.html",
+      "package.json",
+      "node_modules/three/build/three.min.js"
+    ],
+    "win": {
+      "target": "portable",
+      "artifactName": "SonsuzKosu.exe"
+    }
+  }
+}
